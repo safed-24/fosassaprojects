@@ -1,0 +1,11 @@
+# макрос для вставки 51 строки через одну
+
+Sub Insert_Rows()
+    Dim lLastRow As Long, li As Long
+    Application.ScreenUpdating = 0
+    lLastRow = Cells(Rows.Count, 1).End(xlUp).Row
+    For li = lLastRow To 1 Step -1
+        Rows(li).Resize(51).Insert
+    Next li
+    Application.ScreenUpdating = 1
+End Sub
