@@ -1,0 +1,8 @@
+#Если гиперссылка в столбце А, а текст подсказки к этой гиперссылки нужно получить в В, то можно использовать такой макрос: (до 100 строки)
+
+Sub TextHiperToCell()
+Dim i As Long
+    For i = 1 To 100
+        Cells(i, 2) = Cells(i, 1).Hyperlinks(1).ScreenTip
+    Next
+End Sub
